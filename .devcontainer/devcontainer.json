@@ -1,12 +1,4 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
-	"features": {
-		"ghcr.io/devcontainers/features/desktop-lite:1": {}
-	},
-	"forwardPorts": [5901],
-  "portsAttributes": {
-		"5901": { 
-      "label": "VNC desktop"
-		}
-	}
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y xauth x11-apps x11-common"
 }
